@@ -7,7 +7,7 @@ function getPrice() {
     let minBurger = menu[0];
     let minDrink = menu[3];
 
-    for (let i = 0; menu.length; i++) {
+    for (let i = 0; i < menu.length; i++) {
         if (i < 3 && minBurger > menu[i]) minBurger = menu[i];
         if (i > 2 && minDrink > menu[i]) minDrink = menu[i];
     }
