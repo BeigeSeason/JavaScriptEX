@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .order-wrapper {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #666;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .price-input {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 0.7;
+    height: 50%;
+    background-color: seagreen;
+  }
+
+  .show-price {
+    display: flex;
+    flex-grow: 0.3;
+    height: 50%;
+    background-color: royalblue;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+
+<body>
+  <div class="order-wrapper">
+    <div class="price-input">
+      <div class="burger-wrapper">
+        <p><label for="">버거 1</label>
+          <input type="number" name="" id="burger1" placeholder="버거 가격">
+        </p>
+        <p><label for="">버거 2</label>
+          <input type="number" name="" id="burger2" placeholder="버거 가격">
+        </p>
+        <p><label for="">버거 3</label>
+          <input type="number" name="" id="burger3" placeholder="버거 가격">
+        </p>
+      </div>
+
+      <div class="drink-wrapper">
+        <p><label for="">음료 1</label>
+          <input type="number" name="" id="drink1" placeholder="음료 가격">
+        </p>
+        <p><label for="">음료 2</label>
+          <input type="number" name="" id="drink2" placeholder="음료 가격">
+        </p>
+
+        <button id="getvalue" onclick="getPrice()">계산</button>
+      </div>
+    </div>
+    <div class="show-price">
+      <p id="showPrice"></p>
+    </div>
+  </div>
+
+  <script>
+    function getPrice() {
+      let burger1, burger2, burger3, drink1, drink2, totalPrice;
+
+      burger1 = document.getElementById("burger1").value;
+      burger2 = document.getElementById("burger2").value;
+      burger3 = document.getElementById("burger3").value;
+
+      drink1 = document.getElementById("drink1").value;
+      drink2 = document.getElementById("drink2").value;
+
+      let minBurger = Math.min(burger1, burger2, burger3);
+      let minDrink = Math.min(drink1, drink2);
+
+      totalPrice = minBurger + minDrink - 50;
+
+      document.getElementById('showPrice').innerText = `세트의 가격은 ${totalPrice}원 입니다.`;
+    }
+
+  </script>
+</body>
+
+</html>
