@@ -172,7 +172,7 @@ const buyToy = (item, price, quan, callback) => {
 }
 
 const pay = (total) => {
-    console.log(`지불할 금액은 ${total}원 입니다.`);
+    console.log(`지불할 금액은 ${total}원 입니다.🤙`);
 }
 
 buyToy("공룡장난감", 3000, 2, pay);
