@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+
+  </div>
+
+  <script>
+    const div = document.querySelector("div");
+    const ul = document.createElement("ul");
+    // const li = document.createElement("li");
+
+    div.appendChild(ul);
+    for (i = 0; i < 5; i++) {
+      ul.appendChild(document.createElement("li"));
+    }
+
+    const lst = document.querySelectorAll("li");
+
+    lst[0].innerText = "짜장면";
+    lst[1].innerText = "짬뽕";
+    lst[2].innerText = "탕수육";
+    lst[3].innerText = "삼선짜장";
+    lst[4].innerText = "깐풍기";
+
+  </script>
+</body>
+
+</html>
