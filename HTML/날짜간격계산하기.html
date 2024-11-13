@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .box {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: skyblue;
+  }
+
+  a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    font-size: 2em;
+  }
+</style>
+
+<body>
+
+  <div class="box">
+    <h3>학원 수료</h3>
+    <p><a id="d-day"></a>일 <a id="hour"></a>시간 남았습니다.</p>
+    <p>힘내세요!!!!! 화이팅!</p>
+  </div>
+
+  <script src="../JS/날짜간격계산하기.js"></script>
+</body>
+
+</html>
