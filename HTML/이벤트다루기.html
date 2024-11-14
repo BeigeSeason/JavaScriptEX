@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" id="input-box" onfocus="focusEvent()" onblur="blurEvent()">
+
+  <button class="btn1">클릭</button>
+
+  <button class="btn2">클릭</button>
+
+  <button class="btn3" onclick="btn3Click()">클릭</button>
+  <script>
+    const inputBox = document.querySelector("#input-box");
+
+    function focusEvent() {
+      inputBox.style.background = "beige";
+    }
+
+    function blurEvent() {
+      inputBox.style.background = "skyblue";
+    }
+
+    // 프로퍼티 리스너 방식으로 이벤트 등록
+    const btn1 = document.querySelector(".btn1")
+    btn1.onclick = () => {
+      alert("버튼1");
+    }
+
+    // 이벤트 등록 메서드로 이벤트 등록
+    const btn2 = document.querySelector(".btn2");
+    btn2.addEventListener("click", () => {
+      alert("버튼2")
+    })
+
+    function btn3Click() {
+      alert('버튼3');
+    }
+  </script>
+
+
+</body>
+
+
+
+</html>
