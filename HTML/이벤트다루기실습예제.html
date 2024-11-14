@@ -8,6 +8,13 @@
 </head>
 
 <style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+
   body {
     display: flex;
     flex-flow: column;
@@ -16,16 +23,17 @@
   }
 
   .btns {
-    width: 600px;
+    width: 80vw;
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 20px 0;
   }
 
   button {
-    width: 30%;
+    flex-grow: 1;
+    /* width: 32%;*/
     height: 100%;
     border: 0 solid black;
     font-size: 18px;
@@ -34,7 +42,7 @@
 
   .board {
     display: flex;
-    width: 600px;
+    width: 80vw;
     height: 60vh;
     border-radius: 12px;
     background-color: bisque;
@@ -75,17 +83,17 @@
 
 
     blue.addEventListener("click", () => {
-      alert("위상, 황혼, 지혜의 눈동자");
+      alert("위상, 황혼, 지혜의 눈동자 술식순전 蒼");
       board.style.background = "skyblue";
     })
 
     red.addEventListener("click", () => {
-      alert("위상, 바라밀, 빛의기둥")
+      alert("위상, 바라밀, 빛의기둥 술식반전 赫")
       board.style.background = "crimson";
     })
 
     purple.addEventListener("click", () => {
-      alert("구광, 편광, 까마귀와 성명, 표리의 틈새")
+      alert("구광, 편광, 까마귀와 성명, 표리의 틈새 허식 茈")
       board.style.background = "purple";
     })
 

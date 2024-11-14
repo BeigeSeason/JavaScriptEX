@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>text-1</p>
+  <p>text-2</p>
+  <p>text-3</p>
+
+  <script>
+    const pEls = document.querySelectorAll("p");
+
+    /*//이벤트 함수 내부에서 this 키워드를 사용하면 현재 이벤트가 발생한 요소 노드를 바로 가리킬 수 있다
+    pEls.forEach(e => {
+      e.addEventListener("click", function () {
+        if (this.style.color === 'red') {
+          this.style.color = 'black';
+        } else {
+          this.style.color = 'red';
+        }
+      })
+    })*/
+
+    pEls.forEach(e => {
+      e.addEventListener("click", () => {
+        if (e.style.color === 'red') {
+          e.style.color = 'black';
+        } else {
+          e.style.color = 'red';
+        }
+      })
+    })
+
+  </script>
+</body>
+
+</html>

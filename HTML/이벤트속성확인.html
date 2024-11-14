@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <button>클릭</button>
+
+  <input type="text" name="" id=""> -->
+
+  <a href="https://www.naver.com">네이버</a>
+  <a href="https://www.google.com">구글</a>
+  <script>
+    const aEls = document.querySelectorAll("a");
+    aEls.forEach((e) => {
+      e.addEventListener("click", (event) => {
+        event.preventDefault()
+      })
+    });
+
+    /*const inputEl = document.querySelector("input");
+
+    inputEl.addEventListener("keydown", (e) => {
+      console.log(`keyCode:${event.keyCode}`);
+      console.log(`ctrlKey:${event.ctrlKey}`);
+      console.log(`altKey:${event.altKey}`);
+      console.log(`shiftKey:${event.shiftKey}`);
+    })*/
+  </script>
+</body>
+
+</html>

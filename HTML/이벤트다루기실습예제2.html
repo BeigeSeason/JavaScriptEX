@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #container {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 600px;
+    height: 800px;
+  }
+
+  img {
+    width: 500px;
+    height: auto;
+    margin: 20px;
+  }
+
+  #desc {
+    display: none;
+    width: 80%;
+    height: 250px;
+  }
+
+  #btnWrapper {
+    width: 480px;
+  }
+
+  #btn {
+    top: -60px;
+    position: relative;
+    font-size: 13px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    padding: 0;
+    width: 100px;
+    background-color: rgba(240, 240, 240, 0.527);
+    border: 1px solid #999;
+  }
+
+  #btn:active {
+    transform: translate(2px, 2px);
+    background-color: #333;
+    color: aliceblue;
+  }
+</style>
+
+<body>
+
+  <div id="container">
+    <img src="../images/XXX.webp" alt="">
+
+    <div id="desc">
+      <h4>XXX</h4>
+      <p>래퍼 김심야와 DJ이자 프로듀서인 FRNK가 결성한 대한민국의 힙합 듀오. 비스츠앤네이티브스의 소속 아티스트다.
+        팀 명칭은 두 사람 모두 X라는 글자를 좋아해서 X 세개를 팀명에 넣은 것이라고 한다.
+        2016년 07월 09일 데뷔 EP KYOMI를 발표했다. 프로모 싱글 "승무원"을 비롯하여 총 7곡이 수록된 앨범이다.
+        FRNK가 앨범의 전곡을 프로듀싱하고 김심야가 피쳐링없이 혼자 앨범 전체에 랩을 맡았다.</p>
+    </div>
+    <div id="btnWrapper">
+      <button id="btn">상세설명 보기</button>
+    </div>
+  </div>
+
+  <script>
+    const desc = document.getElementById("desc");
+    const btn = document.getElementById("btn");
+
+    btn.addEventListener("click", () => {
+      console.log(desc.style.display)
+      if (desc.style.display !== "block") {
+        desc.style.display = "block";
+        btn.innerText = "상세설명 닫기";
+      } else {
+        desc.style.display = "none";
+        btn.innerText = "상세설명 보기";
+      }
+    })
+  </script>
+</body>
+
+</html>
