@@ -123,7 +123,6 @@
     const emailRegex = /^([a-z]+\d*)+(\.?\w+)+@\w+(\.\w{2,3})+$/;
     const phoneRegex = /^\d{3}-\d{3,4}-\d{4}$/;
 
-
     id.addEventListener("input", () => {
       if (idRegex.test(id.value) == true) {
         isPossible(idCheck, 0);
